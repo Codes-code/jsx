@@ -1,16 +1,46 @@
-//Import the React and ReactDOM libraries
+//IMPORT THE REACT AND REACTDOM LIBRARIES
 import React from 'react';
-import Reactdom from 'react-dom';
+import ReactDOM from 'react-dom';
 
 
-// Create a react component
+// CREATE A REACT COMPONENT
+
+
+
+  
+
 const App=()=>{
-    return <div>We will Rock You</div>;
+
+
+    const label_1={text:"Enter Name Here:"};
+    const input_1="Name";
+    const button_1={text:"Press Me Please"};
+    const style_heading_1={color:"blue", backgroundColor:"yellow", padding:20};
+
+
+    return (
+ 
+    <div>
+        <label style={style_heading_1}>HEADING</label> <br/>
+        <label style={{ color:"white", backgroundColor:"purple" }} className="label" for="name">{label_1.text}</label>
+        <input style={{ color:"black", backgroundColor:"orange" }} id="name" type="text"/>
+        <button style={{ color:"white", backgroundColor:"blue" }}>{button_1.text}</button>    
+  </div>
+
+  /*  HTML CODE that i converted to jsx above. 
+  <div>
+  <label style="color:white; background-color:purple;" class="label" for="name">Your Name Here:</label>
+  <input style="color:black; background-color:orange;" id="name" type="text"/>
+  <button style="color:white; background-color:blue;">Submit</button>
+  </div>  */
+
+    );
 };
 
 
-//Take the react component and show it on the screen
-Reactdom.render(
-    <App/>,
-    document.querySelector('#root')
+//TAKE THE REACT COMPONENT AND SHOW IT ON THE SCREEN
+ReactDOM.render(
+    <App/>, /*what to show*/ document.querySelector('#root') /*where to show*/
+
+    
 );
